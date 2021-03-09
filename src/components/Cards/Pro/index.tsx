@@ -1,9 +1,7 @@
-import { observer } from "mobx-react-lite";
-import theme from "../../../store/theme";
 import { Typography } from "../../Typography";
 import { ProPropsInterface } from "./types";
 
-export const Pro = observer((props: ProPropsInterface) => {
+export const Pro = (props: ProPropsInterface) => {
   const { title, imagePath, projectURL, size = 300 } = props;
 
   const onCardClick = () => {
@@ -12,29 +10,29 @@ export const Pro = observer((props: ProPropsInterface) => {
 
   return (
     <div
-      className={`t${theme.currentTheme}-pro-card`}
+      className={`pro-card`}
       onClick={() => onCardClick()}
       style={{
         width: `${size}px`,
         height: `${size}px`,
       }}
     >
-      <div className={`t${theme.currentTheme}-pro-card__theme`}>
-        <div className={`t${theme.currentTheme}-pro-card__theme--t`}></div>
-        <div className={`t${theme.currentTheme}-pro-card__theme--tr`}></div>
-        <div className={`t${theme.currentTheme}-pro-card__theme--b`}></div>
-        <div className={`t${theme.currentTheme}-pro-card__theme--bl`}></div>
+      <div className={`pro-card__theme`}>
+        <div className={`pro-card__theme--t`}></div>
+        <div className={`pro-card__theme--tr`}></div>
+        <div className={`pro-card__theme--b`}></div>
+        <div className={`pro-card__theme--bl`}></div>
       </div>
       <div
-        className={`t${theme.currentTheme}-pro-card--image`}
+        className={`pro-card--image`}
         style={{
           backgroundImage: `url(${imagePath})`,
         }}
       />
-      <div className={`t${theme.currentTheme}-pro-card--image-fade`}></div>
+      <div className={`pro-card--image-fade`}></div>
       <Typography type="extraTitle" color="inactive">
         {title}
       </Typography>
     </div>
   );
-});
+};
