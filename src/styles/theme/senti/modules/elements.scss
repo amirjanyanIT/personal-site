@@ -174,4 +174,69 @@
       opacity: 0.9;
     }
   }
+  .soc-card {
+    display: flex;
+    background-color: $blackSecondary;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__block {
+      cursor: pointer;
+      flex: 1;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: $extraBlack;
+        width: 80%;
+        height: 80%;
+        &--image {
+          width: 50%;
+          height: 50%;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+    p {
+      flex: 0 0 60px;
+    }
+  }
+  .skill-card {
+    display: flex;
+    &--icon {
+      flex: 0 0 60px;
+      height: 60px;
+      background-position: center;
+      background-size: contain;
+      margin-right: 10px;
+    }
+    &--block {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      width: 100%;
+    }
+    &__progress-bar {
+      position: relative;
+      height: 12px;
+      background-color: $extraBlack;
+      margin-top: 5px;
+      border-radius: 2px;
+      &--filled {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background-color: $active;
+        border-radius: 5px;
+      }
+    }
+  }
 }

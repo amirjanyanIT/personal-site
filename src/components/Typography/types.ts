@@ -7,6 +7,6 @@ export interface TypographyPropsInterface {
   fontWeight?: TypographyFontWeight;
   display?: TypographyDisplay;
   color?: TypographyColor;
-  children: string;
+  children: any;
   [prop: string]: any;
 }
