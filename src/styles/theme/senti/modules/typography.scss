@@ -6,3 +6,34 @@
   font-family: "Rubik-SemiBold";
   src: url("../../../fonts/Rubik/Rubik-SemiBold.ttf") format("truetype");
 }
+
+.t0-typography {
+  &.type--text {
+    font-size: 1.25rem;
+  }
+  &.type--title {
+    font-size: 1.7rem;
+  }
+  &.type--extraTitle {
+    font-size: 2rem;
+    display: inline;
+  }
+  &.display--linear {
+    display: inline;
+  }
+  &.display--block {
+    display: block;
+  }
+  &.weight--regular {
+    font-family: "Rubik-Regular";
+  }
+  &.weight--bold {
+    font-family: "Rubik-SemiBold";
+  }
+  &.color--active {
+    color: $active;
+  }
+  &.color--inactive {
+    color: $inactive;
+  }
+}

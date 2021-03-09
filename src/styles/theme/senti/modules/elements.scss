@@ -65,3 +65,111 @@
     border-right: none;
   }
 }
+
+.t0-ide-card {
+  position: relative;
+  display: flex;
+  height: 200px;
+  margin-bottom: 12px;
+  &::after {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: $active;
+    content: "";
+  }
+  &--block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    img {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      overflow: hidden;
+    }
+    &:first-child {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex: 2;
+    }
+    &:last-child {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      flex: 1;
+    }
+  }
+}
+
+.t0-pro-card {
+  position: relative;
+  background-color: $extraBlack;
+  margin: 1px;
+  cursor: pointer;
+  &__theme {
+    width: 100%;
+    height: 100%;
+    &--t,
+    &--tr,
+    &--b,
+    &--bl {
+      position: absolute;
+      width: 40%;
+      height: 1px;
+      background-color: $active;
+    }
+    &--t {
+      right: 0;
+    }
+    &--tr {
+      left: 80%;
+      top: 20%;
+      transform: rotate(90deg);
+    }
+    &--b {
+      top: 100%;
+    }
+    &--bl {
+      top: 80%;
+      right: 80%;
+      transform: rotate(90deg);
+    }
+  }
+  &--image-fade,
+  &--image {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    top: 5%;
+    left: 5%;
+  }
+  &--image-fade {
+    background-color: $black;
+    opacity: 0.6;
+    transition: opacity 0.3s ease-in-out;
+  }
+  &:hover &--image-fade {
+    opacity: 0.9;
+  }
+  &--image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  p {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    opacity: 0.6;
+    transition: opacity 0.3s ease-in-out;
+  }
+  &:hover p {
+    opacity: 0.9;
+  }
+}
