@@ -1,5 +1,5 @@
 export enum themeType {
-  senti,
+  business,
   infa,
 }
 
