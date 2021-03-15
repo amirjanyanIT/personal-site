@@ -105,6 +105,9 @@
     position: relative;
     display: flex;
     height: 200px;
+    @media only screen and (max-width: 900px) {
+      height: 150px;
+    }
     margin-bottom: 12px;
     &::after {
       position: absolute;
