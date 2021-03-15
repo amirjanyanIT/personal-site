@@ -6,13 +6,25 @@ export const Typography = (props: TypographyPropsInterface) => {
     type = "text",
     display = "block",
     color = "active",
+    className = "",
     children,
     ...rest
   } = props;
 
+  if (display === "linear") {
+    return (
+      <span
+        className={`typography color--${color} weight--${fontWeight} type--${type} display--${display} ${className}`}
+        {...rest}
+      >
+        {children}
+      </span>
+    );
+  }
+
   return (
     <p
-      className={`typography color--${color} weight--${fontWeight} type--${type} display--${display}`}
+      className={`typography color--${color} weight--${fontWeight} type--${type} display--${display} ${className}`}
       {...rest}
     >
       {children}

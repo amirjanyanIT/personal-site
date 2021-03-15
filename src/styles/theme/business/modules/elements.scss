@@ -6,6 +6,7 @@
     display: block;
     cursor: pointer;
     font-size: 1.25rem;
+    min-width: 150px;
     border: 1px;
     font-family: "Rubik-Regular";
     &.filled {
@@ -42,6 +43,7 @@
     display: block;
     font-family: "Rubik-Regular";
     label {
+      min-width: 150px;
       display: inline-block;
       font-size: 1.25rem;
       background-color: $active;
@@ -51,9 +53,41 @@
       border-top-right-radius: 5px;
     }
     input {
-      font-size: 1rem;
+      font-size: 1.2rem;
+      padding: 10px;
       width: 100%;
       height: 35px;
+      color: $inactive;
+      background-color: $blackSecondary;
+      display: block;
+      outline: 0;
+      border: 1px;
+      border-style: solid;
+      border-color: $active;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+    }
+  }
+
+  .textarea {
+    display: block;
+    font-family: "Rubik-Regular";
+    label {
+      min-width: 150px;
+      display: inline-block;
+      font-size: 1.25rem;
+      background-color: $active;
+      padding: 3px 15px;
+      max-width: 180px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+    textarea {
+      resize: none;
+      padding: 10px;
+      font-size: 1.2rem;
+      width: 100%;
       color: $inactive;
       background-color: $blackSecondary;
       display: block;
@@ -193,8 +227,8 @@
         align-items: center;
         border-radius: 50%;
         background-color: $extraBlack;
-        width: 80%;
-        height: 80%;
+        width: 75%;
+        height: 90%;
         &--image {
           width: 50%;
           height: 50%;

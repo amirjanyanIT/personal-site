@@ -1,4 +1,4 @@
-export interface InputPropsInterface {
+export interface TextareaPropsInterface {
   label: string;
   value: any;
   onChange: React.ChangeEventHandler<HTMLInputElement>;

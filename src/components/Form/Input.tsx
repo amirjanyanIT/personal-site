@@ -6,6 +6,7 @@ import { useRef } from "react";
 export const Input = (props: InputPropsInterface) => {
   const { label, ...rest } = props;
   const { current: inputId } = useRef(uuidv4());
+
   return (
     <div className={`input`}>
       <label htmlFor={inputId}>{label}</label>

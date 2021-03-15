@@ -1,0 +1,139 @@
+.theme-0 {
+  .container {
+    &__face {
+      &__upper {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 450px;
+        &--person {
+          position: absolute;
+          width: 500px;
+          left: calc(50% - 260px);
+          height: 450px;
+          background-image: url("../../../../images/person.png");
+          background-size: contain;
+          background-repeat: no-repeat;
+          @media only screen and (max-width: 1024px) {
+            display: none;
+          }
+        }
+        &--name {
+          p {
+            margin: 10px 0;
+          }
+        }
+        &__info {
+          * {
+            margin: 10px 0;
+          }
+          &--actions {
+            display: flex;
+            justify-content: space-between;
+            button:first-child {
+              margin-right: 15px;
+            }
+          }
+        }
+      }
+      &__under {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+      }
+    }
+
+    &__ideas {
+      &--title {
+        text-align: center;
+        margin: 60px 0;
+      }
+      &--list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+      }
+    }
+    &__contacts {
+      &--block {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-top: 60px;
+      }
+      &--form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        p:first-child {
+          text-align: center;
+        }
+        form {
+          margin-top: 30px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          flex: 1;
+        }
+      }
+      &--social {
+        p:first-child {
+          text-align: center;
+        }
+      }
+      &--social-list {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+      &--title {
+        text-align: center;
+        margin: 30px 0;
+      }
+    }
+    &__projects {
+      &--title {
+        text-align: center;
+        *{
+          margin: 10px;
+        }
+      }
+      &--line {
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    &__about {
+      &--title {
+        text-align: center;
+      }
+      &--grid {
+        display: grid;
+        grid-template-columns: 2fr 1.3fr;
+        gap: 30px;
+        margin-top: 30px;
+      }
+      &--skills {
+        flex: 2;
+        * {
+          margin-bottom: 10px;
+        }
+      }
+      &__me {
+        flex: 1;
+        text-align: right;
+        &--photo {
+          width: 100%;
+          height: 73%;
+          margin-top: 30px;
+          background-color: $extraBlack;
+          border-radius: 30px;
+        }
+      }
+    }
+  }
+}

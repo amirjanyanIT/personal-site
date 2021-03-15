@@ -3,7 +3,7 @@ import { Typography } from "../../Typography";
 import { IdePropsInterface } from "./types";
 
 export const Ide = (props: IdePropsInterface) => {
-  const { title, content, gifURL } = props;
+  const { title, content, gif } = props;
 
   const EContent: string = useElipsis(content, 300);
 
@@ -13,13 +13,13 @@ export const Ide = (props: IdePropsInterface) => {
         <Typography color="active" type="title">
           {title}
         </Typography>
-        <Typography color="inactive" type="text">
+        <Typography color="inactive" type="smallText">
           {EContent}
         </Typography>
       </div>
       <div className={`ide-card--block`}>
         <div className={`ide-card--imgContainer`}>
-          <img src={gifURL} alt="" />
+          <img src={gif} alt="" />
         </div>
       </div>
     </div>

@@ -1,4 +1,9 @@
-export type TypographyType = "extraTitle" | "title" | "text";
+export type TypographyType =
+  | "extraTitle"
+  | "title"
+  | "text"
+  | "smallText"
+  | "extraTitleB";
 export type TypographyFontWeight = "regular" | "bold";
 export type TypographyDisplay = "linear" | "block";
 export type TypographyColor = "active" | "inactive";
@@ -8,5 +13,6 @@ export interface TypographyPropsInterface {
   display?: TypographyDisplay;
   color?: TypographyColor;
   children: any;
+  className?: string;
   [prop: string]: any;
 }
