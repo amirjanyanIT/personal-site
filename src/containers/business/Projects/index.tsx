@@ -1,10 +1,11 @@
+import { forwardRef } from "react";
 import { Section } from "../../../components/Blocks";
 import { Pro } from "../../../components/Cards/Pro";
 import { Typography } from "../../../components/Typography";
 
-export const Projects = () => {
+export const Projects = forwardRef((_props, ref) => {
   return (
-    <Section className="container__projects">
+    <Section className="container__projects" ref={ref}>
       <div className="container__projects--title">
         <Typography color="active" fontWeight="bold" type="extraTitle">
           PROJECTS
@@ -35,4 +36,4 @@ export const Projects = () => {
       </div>
     </Section>
   );
-};
+});

@@ -1,10 +1,11 @@
+import { forwardRef } from "react";
 import { Section } from "../../../components/Blocks";
 import { Skill } from "../../../components/Cards/Skill";
 import { Typography } from "../../../components/Typography";
 
-export const About = () => {
+export const About = forwardRef((_props, ref) => {
   return (
-    <Section className="container__about">
+    <Section className="container__about" ref={ref}>
       <Typography
         fontWeight="bold"
         type="extraTitle"
@@ -85,4 +86,4 @@ export const About = () => {
       </div>
     </Section>
   );
-};
+});

@@ -1,10 +1,11 @@
+import { forwardRef } from "react";
 import { Section } from "../../../components/Blocks";
 import { Ide } from "../../../components/Cards/Ide";
 import { Typography } from "../../../components/Typography";
 import HeartGif from "../../../images/heart.gif";
-export const Ideas = () => {
+export const Ideas = forwardRef((_props, ref) => {
   return (
-    <Section className="container__ideas">
+    <Section className="container__ideas" ref={ref}>
       <Typography
         fontWeight="bold"
         type="extraTitle"
@@ -51,4 +52,4 @@ export const Ideas = () => {
       </div>
     </Section>
   );
-};
+});

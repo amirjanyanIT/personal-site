@@ -1,11 +1,12 @@
+import { forwardRef } from "react";
 import { Section } from "../../../components/Blocks";
 import { Soc } from "../../../components/Cards/Soc";
 import { Button, Input, Textarea } from "../../../components/Form";
 import { Typography } from "../../../components/Typography";
 
-export const Contacts = () => {
+export const Contacts = forwardRef((_props, ref) => {
   return (
-    <Section className="container__contacts">
+    <Section className="container__contacts" ref={ref}>
       <Typography
         fontWeight="bold"
         type="extraTitle"
@@ -82,4 +83,4 @@ export const Contacts = () => {
       </div>
     </Section>
   );
-};
+});

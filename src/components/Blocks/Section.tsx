@@ -1,13 +1,17 @@
+import { forwardRef } from "react";
 import { ContainerPropsInterface } from "./types/Container";
 
-export const Section = (props: ContainerPropsInterface) => {
-  const { children, className = "", ...rest } = props;
+export const Section = forwardRef(
+  (props: ContainerPropsInterface, ref: any) => {
+    const { children, className = "", ...rest } = props;
 
-  return (
-    <div className="section">
-      <div className={`section--filling ${className}`} {...rest}>
-        {children}
+    console.log("from forward: ", ref);
+    return (
+      <div className="section" ref={ref}>
+        <div className={`section--filling ${className}`} {...rest}>
+          {children}
+        </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+);

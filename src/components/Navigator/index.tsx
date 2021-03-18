@@ -3,7 +3,10 @@ import { NavigatorInterface, SectionInterface } from "./types";
 export const Navigator = (props: NavigatorInterface) => {
   const { logo, sections } = props;
 
-  const onSectionLabelClick = (section: SectionInterface) => {};
+  const onSectionLabelClick = (section: SectionInterface) => {
+    const offsetTop = section.viewElement.current.offsetTop;
+    window.scrollTo({ top: offsetTop, behavior: "smooth" });
+  };
 
   return (
     <div className="navigator">

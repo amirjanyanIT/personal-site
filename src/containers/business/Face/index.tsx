@@ -1,11 +1,12 @@
+import { forwardRef } from "react";
 import { Section } from "../../../components/Blocks";
 import { Button } from "../../../components/Form";
 import { Typography } from "../../../components/Typography";
 import { ReactComponent as ScrollSVG } from "../../../images/scroll.svg";
 
-export const Face = () => {
+export const Face = forwardRef((_props, ref) => {
   return (
-    <Section className="container__face">
+    <Section className="container__face" ref={ref}>
       <div className="container__face__upper">
         <div className="container__face__upper--name">
           <Typography fontWeight="bold" type="extraTitleB">
@@ -53,4 +54,4 @@ export const Face = () => {
       </div>
     </Section>
   );
-};
+});
