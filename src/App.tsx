@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { observer } from "mobx-react-lite";
 import { Face } from "./containers/business/Face";
 import { Ideas } from "./containers/business/Ideas";
@@ -6,7 +7,7 @@ import { Projects } from "./containers/business/Projects";
 import { About } from "./containers/business/About";
 import theme from "./store/theme";
 import { Navigator } from "./components/Navigator";
-import { useRef } from "react";
+import { Typography } from "./components/Typography";
 
 export const App = observer(() => {
   const faceRef = useRef();
@@ -39,7 +40,11 @@ export const App = observer(() => {
             viewElement: aboutRef,
           },
         ]}
-        logo="Hello World"
+        logo={
+          <Typography color="active" type="text">
+            .HA
+          </Typography>
+        }
       />
       <Face ref={faceRef} />
       <Ideas ref={ideasRef} />

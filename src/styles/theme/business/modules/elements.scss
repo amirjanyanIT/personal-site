@@ -9,6 +9,15 @@
     align-items: center;
     height: 40px;
     background-color: $extraBlack;
+    @media only screen and (max-width: 480px) {
+      justify-content: center;
+    }
+    &--logo {
+      padding-left: 20px;
+      @media only screen and (max-width: 480px) {
+        display: none;
+      }
+    }
     &--list {
       display: flex;
       padding-right: 20px;

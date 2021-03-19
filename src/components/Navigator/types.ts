@@ -4,6 +4,6 @@ export interface SectionInterface {
 }
 
 export interface NavigatorInterface {
-  logo: string;
+  logo: any;
   sections: SectionInterface[];
 }
