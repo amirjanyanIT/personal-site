@@ -17,40 +17,44 @@ export const App = observer(() => {
   const aboutRef = useRef();
   return (
     <div className={`App theme-${theme.currentTheme}`}>
-      <Navigator
-        sections={[
-          {
-            label: "Above",
-            viewElement: faceRef,
-          },
-          {
-            label: "Ideas",
-            viewElement: ideasRef,
-          },
-          {
-            label: "Contacts",
-            viewElement: contactsRef,
-          },
-          {
-            label: "Projects",
-            viewElement: projectsRef,
-          },
-          {
-            label: "About",
-            viewElement: aboutRef,
-          },
-        ]}
-        logo={
-          <Typography color="active" type="text">
-            .HA
-          </Typography>
-        }
-      />
-      <Face ref={faceRef} />
-      <Ideas ref={ideasRef} />
-      <Contacts ref={contactsRef} />
-      <Projects ref={projectsRef} />
-      <About ref={aboutRef} />
+      {theme.currentTheme === "infa" && (
+        <>
+          <Navigator
+            sections={[
+              {
+                label: "Above",
+                viewElement: faceRef,
+              },
+              {
+                label: "Ideas",
+                viewElement: ideasRef,
+              },
+              {
+                label: "Contacts",
+                viewElement: contactsRef,
+              },
+              {
+                label: "Projects",
+                viewElement: projectsRef,
+              },
+              {
+                label: "About",
+                viewElement: aboutRef,
+              },
+            ]}
+            logo={
+              <Typography color="active" type="text">
+                .HA
+              </Typography>
+            }
+          />
+          <Face ref={faceRef} />
+          <Ideas ref={ideasRef} />
+          <Contacts ref={contactsRef} />
+          <Projects ref={projectsRef} />
+          <About ref={aboutRef} />
+        </>
+      )}
     </div>
   );
 });

@@ -1,7 +1,4 @@
-export enum themeType {
-  business,
-  infa,
-}
+export type themeType = "business" | "infa";
 
 export interface themeStoreObject {
   currentTheme: themeType;
