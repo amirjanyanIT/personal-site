@@ -10,14 +10,16 @@ export const Navigator = (props: NavigatorInterface) => {
 
   return (
     <div className="navigator">
-      <div className="navigator--logo">{logo}</div>
-      <ul className="navigator--list">
-        {sections.map((section, index) => (
-          <li key={index} onClick={() => onSectionLabelClick(section)}>
-            {section.label}
-          </li>
-        ))}
-      </ul>
+      <div className="navigator--content">
+        <div className="navigator--logo">{logo}</div>
+        <ul className="navigator--list">
+          {sections.map((section, index) => (
+            <li key={index} onClick={() => onSectionLabelClick(section)}>
+              {section.label}
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };

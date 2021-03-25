@@ -1,12 +1,12 @@
 @font-face {
   font-family: "Rubik-Regular";
-  src: url("../../../fonts/Rubik/Rubik-Regular.ttf") format("truetype");
+  src: url("../../fonts/Rubik/Rubik-Regular.ttf") format("truetype");
 }
 @font-face {
   font-family: "Rubik-SemiBold";
-  src: url("../../../fonts/Rubik/Rubik-SemiBold.ttf") format("truetype");
+  src: url("../../fonts/Rubik/Rubik-SemiBold.ttf") format("truetype");
 }
-.theme-0 {
+.theme-infa {
   .typography {
     &.type--smallText {
       font-size: 1.2rem;
@@ -38,10 +38,10 @@
       font-family: "Rubik-SemiBold";
     }
     &.color--active {
-      color: $active;
+      color: $senti-active;
     }
     &.color--inactive {
-      color: $inactive;
+      color: $senti-inactive;
     }
   }
 }

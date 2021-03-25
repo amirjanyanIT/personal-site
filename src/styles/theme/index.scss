@@ -4,7 +4,11 @@
 @import "./modules/elements.scss";
 @import "./modules/container.scss";
 
-body {
-  background-color: $black;
-  color: $inactive;
+body.infa {
+  background-color: $senti-filling;
+  color: $senti-inactive;
+}
+body.senti {
+  background-color: $infa-filling;
+  color: $infa-inactive;
 }

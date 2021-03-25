@@ -1,4 +1,4 @@
-.theme-0 {
+.theme-infa {
   .container {
     &__face {
       &__upper {
@@ -16,7 +16,7 @@
           width: 500px;
           left: calc(50% - 260px);
           height: 450px;
-          background-image: url("../../../../images/person.png");
+          background-image: url("../../../images/person.png");
           background-size: contain;
           background-repeat: no-repeat;
           @media only screen and (max-width: 1024px) {
@@ -136,7 +136,7 @@
     &__projects {
       &--title {
         text-align: center;
-        *{
+        * {
           margin: 10px;
         }
       }
@@ -187,10 +187,22 @@
           width: 100%;
           height: 73%;
           margin-top: 30px;
-          background-color: $extraBlack;
+          background-color: $senti-extraFilling;
           border-radius: 30px;
         }
       }
+    }
+  }
+}
+
+.theme-senti {
+  .container {
+    &__kid {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 500px;
+      overflow: hidden;
     }
   }
 }

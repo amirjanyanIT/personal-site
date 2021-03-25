@@ -1,30 +1,34 @@
-.theme-0 {
+.theme-infa {
   .navigator {
+    &--content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1250px;
+      margin: 0 auto;
+      width: 100%;
+      height: 100%;
+    }
     position: fixed;
     top: 0;
     z-index: 1000;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     height: 40px;
-    background-color: $extraBlack;
+    background-color: $senti-extraFilling;
     @media only screen and (max-width: 480px) {
       justify-content: center;
     }
     &--logo {
-      padding-left: 20px;
       @media only screen and (max-width: 480px) {
         display: none;
       }
     }
     &--list {
       display: flex;
-      padding-right: 20px;
       font-family: "Rubik-Regular";
       li {
         &:hover {
-          color: $active;
+          color: $senti-active;
         }
         cursor: pointer;
         margin-left: 30px;
@@ -43,29 +47,29 @@
     font-family: "Rubik-Regular";
     &.filled {
       &--primary {
-        background-color: $active;
-        color: $inactive;
-        border-color: $active;
+        background-color: $senti-active;
+        color: $senti-inactive;
+        border-color: $senti-active;
         border-style: solid;
       }
       &--secondary {
-        background-color: $black;
-        color: $inactive;
-        border-color: $black;
+        background-color: $senti-filling;
+        color: $senti-inactive;
+        border-color: $senti-filling;
         border-style: solid;
       }
     }
     &.outlined {
       &--primary {
         background-color: transparent;
-        color: $active;
-        border-color: $active;
+        color: $senti-active;
+        border-color: $senti-active;
         border-style: solid;
       }
       &--secondary {
         background-color: transparent;
-        color: $black;
-        border-color: $black;
+        color: $senti-filling;
+        border-color: $senti-filling;
         border-style: solid;
       }
     }
@@ -78,7 +82,7 @@
       min-width: 150px;
       display: inline-block;
       font-size: 1.25rem;
-      background-color: $active;
+      background-color: $senti-active;
       padding: 3px 15px;
       max-width: 180px;
       border-top-left-radius: 5px;
@@ -89,13 +93,13 @@
       padding: 10px;
       width: 100%;
       height: 35px;
-      color: $inactive;
-      background-color: $blackSecondary;
+      color: $senti-inactive;
+      background-color: $senti-fillingSec;
       display: block;
       outline: 0;
       border: 1px;
       border-style: solid;
-      border-color: $active;
+      border-color: $senti-active;
       border-top: none;
       border-left: none;
       border-right: none;
@@ -109,7 +113,7 @@
       min-width: 150px;
       display: inline-block;
       font-size: 1.25rem;
-      background-color: $active;
+      background-color: $senti-active;
       padding: 3px 15px;
       max-width: 180px;
       border-top-left-radius: 5px;
@@ -120,13 +124,13 @@
       padding: 10px;
       font-size: 1.2rem;
       width: 100%;
-      color: $inactive;
-      background-color: $blackSecondary;
+      color: $senti-inactive;
+      background-color: $senti-fillingSec;
       display: block;
       outline: 0;
       border: 1px;
       border-style: solid;
-      border-color: $active;
+      border-color: $senti-active;
       border-top: none;
       border-left: none;
       border-right: none;
@@ -147,7 +151,7 @@
       left: 0;
       height: 2px;
       width: 100%;
-      background-color: $active;
+      background-color: $senti-active;
       content: "";
     }
     &--block {
@@ -177,7 +181,7 @@
 
   .pro-card {
     position: relative;
-    background-color: $extraBlack;
+    background-color: $senti-extraFilling;
     margin: 1px;
     cursor: pointer;
     &__theme {
@@ -190,7 +194,7 @@
         position: absolute;
         width: 40%;
         height: 1px;
-        background-color: $active;
+        background-color: $senti-active;
       }
       &--t {
         right: 0;
@@ -218,7 +222,7 @@
       left: 5%;
     }
     &--image-fade {
-      background-color: $black;
+      background-color: $senti-filling;
       opacity: 0.6;
       transition: opacity 0.3s ease-in-out;
     }
@@ -245,7 +249,7 @@
   }
   .soc-card {
     display: flex;
-    background-color: $blackSecondary;
+    background-color: $senti-fillingSec;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -261,7 +265,7 @@
         justify-content: center;
         align-items: center;
         border-radius: 50%;
-        background-color: $extraBlack;
+        background-color: $senti-extraFilling;
         width: 75%;
         height: 90%;
         &--image {
@@ -295,7 +299,7 @@
     &__progress-bar {
       position: relative;
       height: 12px;
-      background-color: $extraBlack;
+      background-color: $senti-extraFilling;
       margin-top: 5px;
       border-radius: 2px;
       &--filled {
@@ -303,8 +307,42 @@
         top: 0;
         left: 0;
         height: 100%;
-        background-color: $active;
+        background-color: $senti-active;
         border-radius: 5px;
+      }
+    }
+  }
+}
+
+.theme-senti {
+  .navigator {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 40px;
+    &--content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1240px;
+      margin: 0 auto;
+      width: 100%;
+      height: 40px;
+    }
+    @media only screen and (max-width: 480px) {
+      justify-content: center;
+    }
+    &--logo {
+      @media only screen and (max-width: 480px) {
+        display: none;
+      }
+    }
+    &--list {
+      display: flex;
+      li {
+        cursor: pointer;
+        margin-left: 30px;
       }
     }
   }
