@@ -5,10 +5,10 @@
 @import "./modules/container.scss";
 
 body.infa {
-  background-color: $senti-filling;
-  color: $senti-inactive;
+  background-color: $infa-filling !important;
+  color: $infa-inactive !important;
 }
 body.senti {
-  background-color: $infa-filling;
-  color: $infa-inactive;
+  background-color: $senti-filling !important;
+  color: $senti-inactive !important;
 }

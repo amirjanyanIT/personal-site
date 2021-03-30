@@ -187,7 +187,7 @@
           width: 100%;
           height: 73%;
           margin-top: 30px;
-          background-color: $senti-extraFilling;
+          background-color: $infa-extraFilling;
           border-radius: 30px;
         }
       }
@@ -202,7 +202,98 @@
       justify-content: space-between;
       align-items: center;
       height: 500px;
-      overflow: hidden;
+      &--section {
+        background: linear-gradient(
+          180deg,
+          rgba(166, 65, 150, 0.9) 0%,
+          rgba(10, 25, 47, 0.9)
+        );
+      }
+      &--contact {
+        display: flex;
+        flex: 3;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        *:not(button) {
+          margin: 8px 0;
+        }
+        .actions {
+          display: flex;
+          button {
+            margin-right: 30px;
+          }
+        }
+      }
+      &--gif-container {
+        height: 100%;
+        flex: 0 0 450px;
+        box-shadow: 1px 1px 16px 5px black;
+        div {
+          background-position: center;
+          background-size: 110%;
+          background-repeat: no-repeat;
+          background-color: #8f3b88;
+          background-blend-mode: hard-light;
+          width: 100%;
+          opacity: 0.9;
+          height: 100%;
+        }
+      }
+    }
+    &__projects {
+      &--title {
+        margin-bottom: 30 px;
+      }
+      &--line {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    &__about {
+      &--title {
+        margin-bottom: 30px;
+      }
+      &--skills {
+        margin-top: 10px;
+        .skill-card {
+          margin-bottom: 5px;
+        }
+      }
+      &--grid {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+      }
+      &__me {
+        &--photo {
+          display: none;
+        }
+      }
+    }
+    &__contacts {
+      &--block {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+      }
+      &--form {
+        flex: 1;
+        margin-top: 30px;
+        form > * {
+          margin: 30px 0;
+        }
+      }
+      &--social-list {
+        max-width: 650px;
+        cursor: pointer;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        flex: 1;
+        margin-top: 10px;
+      }
     }
   }
 }

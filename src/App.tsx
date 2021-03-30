@@ -20,8 +20,8 @@ export const App = observer(() => {
 
   useEffect(() => {
     const body = document.querySelector("body");
-    body?.classList.remove("theme-business");
-    body?.classList.remove("theme-infa");
+    body?.classList.remove("senti");
+    body?.classList.remove("infa");
 
     body?.classList.add(`${theme.currentTheme}`);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -53,25 +53,17 @@ export const App = observer(() => {
           },
         ]}
         logo={
-          <Typography color="active" type="text">
+          <Typography color="active" type="title">
             .HA
           </Typography>
         }
       />
-      {theme.currentTheme === "infa" && (
-        <>
-          <Face ref={faceRef} />
-          <Ideas ref={ideasRef} />
-          <Contacts ref={contactsRef} />
-          <Projects ref={projectsRef} />
-          <About ref={aboutRef} />
-        </>
-      )}
-      {theme.currentTheme === "senti" && (
-        <>
-          <Kid ref={faceRef} />
-        </>
-      )}
+      {theme.currentTheme === "infa" && <Face ref={faceRef} />}
+      {theme.currentTheme === "senti" && <Kid ref={faceRef} />}
+      <Projects ref={projectsRef} />
+      <About ref={aboutRef} />
+      <Contacts ref={contactsRef} />
+      <Ideas ref={ideasRef} />
     </div>
   );
 });

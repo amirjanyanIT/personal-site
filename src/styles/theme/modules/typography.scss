@@ -38,6 +38,46 @@
       font-family: "Rubik-SemiBold";
     }
     &.color--active {
+      color: $infa-active;
+    }
+    &.color--inactive {
+      color: $infa-inactive;
+    }
+  }
+}
+
+.theme-senti {
+  .typography {
+    &.type--smallText {
+      font-size: 1.2rem;
+    }
+    &.type--text {
+      font-size: 1.5rem;
+    }
+    &.type--title {
+      font-size: 2.4rem;
+    }
+    &.type--extraTitle {
+      font-size: 3rem;
+      display: inline;
+    }
+    &.type--extraTitleB {
+      font-size: 4.5rem;
+      display: inline;
+    }
+    &.display--linear {
+      display: inline;
+    }
+    &.display--block {
+      display: block;
+    }
+    &.weight--regular {
+      font-family: "VT323";
+    }
+    &.weight--bold {
+      font-family: "VT323";
+    }
+    &.color--active {
       color: $senti-active;
     }
     &.color--inactive {
