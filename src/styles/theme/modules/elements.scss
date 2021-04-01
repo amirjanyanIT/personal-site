@@ -74,7 +74,36 @@
       }
     }
   }
-
+  .textarea {
+    display: block;
+    font-family: "Rubik-Regular";
+    label {
+      min-width: 150px;
+      display: inline-block;
+      font-size: 1.25rem;
+      background-color: $infa-active;
+      padding: 3px 15px;
+      max-width: 180px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+    textarea {
+      font-size: 1.2rem;
+      padding: 10px;
+      width: 100%;
+      resize: none;
+      color: $infa-inactive;
+      background-color: $infa-fillingSec;
+      display: block;
+      outline: 0;
+      border: 1px;
+      border-style: solid;
+      border-color: $infa-active;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+    }
+  }
   .input {
     display: block;
     font-family: "Rubik-Regular";
@@ -425,6 +454,22 @@
           border-style: dotted;
           background-color: $senti-filling;
         }
+      }
+    }
+  }
+  .skill-card {
+    &__progress-bar {
+      position: relative;
+      height: 12px;
+      background-color: $infa-extraFilling;
+      margin-top: 5px;
+      border-radius: 2px;
+      &--filled {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background-color: $senti-active;
       }
     }
   }
