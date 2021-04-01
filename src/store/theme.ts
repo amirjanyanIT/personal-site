@@ -2,7 +2,7 @@ import { makeAutoObservable } from "mobx";
 import { themeStoreObject, themeType } from "./types/theme";
 
 class Theme implements themeStoreObject {
-  currentTheme: themeType = "senti";
+  currentTheme: themeType = "infa";
 
   constructor() {
     makeAutoObservable(this);
