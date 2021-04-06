@@ -10,6 +10,7 @@ import { Navigator } from "./components/Navigator";
 import { Typography } from "./components/Typography";
 
 import theme from "./store/theme";
+import { ThemeSwitcher } from "./components/ThemeSwitcher";
 
 export const App = observer(() => {
   const faceRef = useRef();
@@ -64,6 +65,7 @@ export const App = observer(() => {
       <About ref={aboutRef} />
       <Contacts ref={contactsRef} />
       <Ideas ref={ideasRef} />
+      <ThemeSwitcher />
     </div>
   );
 });
