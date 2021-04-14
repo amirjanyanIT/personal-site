@@ -11,6 +11,7 @@ import { Typography } from "./components/Typography";
 
 import theme from "./store/theme";
 import { ThemeSwitcher } from "./components/ThemeSwitcher";
+import { PageLoader } from "./components/PageLoader";
 
 export const App = observer(() => {
   const faceRef = useRef();
@@ -30,6 +31,7 @@ export const App = observer(() => {
 
   return (
     <div className={`App theme-${theme.currentTheme}`}>
+      <PageLoader onLoad={true} />
       <Navigator
         sections={[
           {

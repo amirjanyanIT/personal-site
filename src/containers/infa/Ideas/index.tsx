@@ -11,7 +11,7 @@ export const Ideas = forwardRef((_props, ref) => {
         type="extraTitle"
         className="container__ideas--title"
       >
-        IDEOLOGIES
+        IDEAS
       </Typography>
       <div className="container__ideas--list">
         <Ide

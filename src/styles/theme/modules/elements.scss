@@ -609,12 +609,14 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: 60%;
-    @keyframes spin {
-      100% {
-        -webkit-transform: rotate(360deg);
-      }
+  }
+  @keyframes bip {
+    from {
+      opacity: 1;
     }
-    animation: spin 4s linear infinite;
+    to {
+      opacity: 0;
+    }
   }
   &.senti {
     background-color: $infa-active;
@@ -623,16 +625,27 @@
     }
     .two-wave {
       background-color: rgba(255, 166, 0, 0.185);
+      animation: bip 0.6s infinite;
+      animation-direction: alternate-reverse;
     }
+    .img {
+      transform: scale(0.9) translateX(4px);
+    }
+    background-color: rgba(255, 166, 0, 1);
   }
   &.infa {
     .one-wave {
-      background-color: rgba(175, 238, 238, 0.637);
+      background-color: rgba(245, 43, 218, 0.64);
     }
     .two-wave {
-      background-color: rgba(175, 238, 238, 0.39);
+      background-color: rgba(136, 80, 154, 0.39);
+      animation: bip 0.6s infinite;
+      animation-direction: alternate-reverse;
+    }
+    .img {
+      transform: scale(1.2);
     }
 
-    background-color: $senti-active;
+    background-color: rgba(136, 80, 154, 1);
   }
 }

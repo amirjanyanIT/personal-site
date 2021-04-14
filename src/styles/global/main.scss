@@ -11,3 +11,31 @@
     max-width: 1240px;
   }
 }
+
+.page-loader {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background-color: white;
+}
+
+.page-loader img {
+  transform: scale(1.5);
+}
+
+.page-loader p {
+  font-family: verdana;
+  margin-top: 50px;
+  font-size: 2em;
+  color: #101010;
+}
+
+.page-loader.active {
+  display: flex !important;
+}
