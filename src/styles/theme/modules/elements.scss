@@ -1,0 +1,651 @@
+.theme-infa {
+  .navigator {
+    &--content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1250px;
+      margin: 0 auto;
+      width: 100%;
+      height: 100%;
+    }
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 40px;
+    background-color: $infa-extraFilling;
+    @media only screen and (max-width: 480px) {
+      justify-content: center;
+    }
+    &--logo {
+      @media only screen and (max-width: 480px) {
+        display: none;
+      }
+    }
+    &--list {
+      display: flex;
+      font-family: "Rubik-Regular";
+      li {
+        &:hover {
+          color: $infa-active;
+        }
+        cursor: pointer;
+        margin-left: 30px;
+      }
+    }
+  }
+  .button {
+    outline: 0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: block;
+    cursor: pointer;
+    font-size: 1.25rem;
+    min-width: 150px;
+    border: 1px;
+    font-family: "Rubik-Regular";
+    &.filled {
+      &--primary {
+        background-color: $infa-active;
+        color: $infa-inactive;
+        border-color: $infa-active;
+        border-style: solid;
+      }
+      &--secondary {
+        background-color: $infa-filling;
+        color: $infa-inactive;
+        border-color: $infa-filling;
+        border-style: solid;
+      }
+    }
+    &.outlined {
+      &--primary {
+        background-color: transparent;
+        color: $infa-active;
+        border-color: $infa-active;
+        border-style: solid;
+      }
+      &--secondary {
+        background-color: transparent;
+        color: $infa-filling;
+        border-color: $infa-filling;
+        border-style: solid;
+      }
+    }
+  }
+  .textarea {
+    display: block;
+    font-family: "Rubik-Regular";
+    label {
+      min-width: 150px;
+      display: inline-block;
+      font-size: 1.25rem;
+      background-color: $infa-active;
+      padding: 3px 15px;
+      max-width: 180px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+    textarea {
+      font-size: 1.2rem;
+      padding: 10px;
+      width: 100%;
+      resize: none;
+      color: $infa-inactive;
+      background-color: $infa-fillingSec;
+      display: block;
+      outline: 0;
+      border: 1px;
+      border-style: solid;
+      border-color: $infa-active;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+    }
+  }
+  .input {
+    display: block;
+    font-family: "Rubik-Regular";
+    label {
+      min-width: 150px;
+      display: inline-block;
+      font-size: 1.25rem;
+      background-color: $infa-active;
+      padding: 3px 15px;
+      max-width: 180px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+    input {
+      font-size: 1.2rem;
+      padding: 10px;
+      width: 100%;
+      height: 35px;
+      color: $infa-inactive;
+      background-color: $infa-fillingSec;
+      display: block;
+      outline: 0;
+      border: 1px;
+      border-style: solid;
+      border-color: $infa-active;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+    }
+  }
+  .ide-card {
+    position: relative;
+    display: flex;
+    height: 200px;
+    @media only screen and (max-width: 900px) {
+      height: 150px;
+    }
+    margin-bottom: 12px;
+    &::after {
+      position: absolute;
+      top: calc(100% + 10px);
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background-color: $infa-active;
+      content: "";
+    }
+    &--block {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      img {
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        overflow: hidden;
+      }
+      &:first-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 2;
+      }
+      &:last-child {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        flex: 1;
+      }
+    }
+  }
+
+  .pro-card {
+    position: relative;
+    background-color: $infa-extraFilling;
+    margin: 1px;
+    cursor: pointer;
+    &__theme {
+      width: 100%;
+      height: 100%;
+      &--t,
+      &--tr,
+      &--b,
+      &--bl {
+        position: absolute;
+        width: 40%;
+        height: 1px;
+        background-color: $infa-active;
+      }
+      &--t {
+        right: 0;
+      }
+      &--tr {
+        left: 80%;
+        top: 20%;
+        transform: rotate(90deg);
+      }
+      &--b {
+        top: 100%;
+      }
+      &--bl {
+        top: 80%;
+        right: 80%;
+        transform: rotate(90deg);
+      }
+    }
+    &--image-fade,
+    &--image {
+      position: absolute;
+      width: 90%;
+      height: 90%;
+      top: 5%;
+      left: 5%;
+    }
+    &--image-fade {
+      background-color: $infa-filling;
+      opacity: 0.6;
+      transition: opacity 0.3s ease-in-out;
+    }
+    &:hover &--image-fade {
+      opacity: 0.9;
+    }
+    &--image {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    p {
+      position: absolute;
+      top: 45%;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      opacity: 0.6;
+      transition: opacity 0.3s ease-in-out;
+    }
+    &:hover p {
+      opacity: 0.9;
+    }
+  }
+  .soc-card {
+    display: flex;
+    background-color: $infa-fillingSec;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__block {
+      cursor: pointer;
+      flex: 1;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: $infa-extraFilling;
+        width: 75%;
+        height: 90%;
+        &--image {
+          width: 50%;
+          height: 50%;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+    p {
+      flex: 0 0 60px;
+    }
+  }
+  .skill-card {
+    display: flex;
+    &--icon {
+      flex: 0 0 60px;
+      height: 60px;
+      background-position: center;
+      background-size: contain;
+      margin-right: 10px;
+    }
+    &--block {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      width: 100%;
+    }
+    &__progress-bar {
+      position: relative;
+      height: 12px;
+      background-color: $infa-extraFilling;
+      margin-top: 5px;
+      border-radius: 2px;
+      &--filled {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background-color: $infa-active;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+.theme-senti {
+  .navigator {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 40px;
+    &--content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1240px;
+      margin: 0 auto;
+      width: 100%;
+      height: 40px;
+    }
+    @media only screen and (max-width: 480px) {
+      justify-content: center;
+    }
+    &--logo {
+      @media only screen and (max-width: 480px) {
+        display: none;
+      }
+    }
+    &--list {
+      display: flex;
+      li {
+        cursor: pointer;
+        margin-left: 30px;
+      }
+    }
+  }
+}
+
+.theme-senti {
+  .navigator {
+    background-color: rgba(10, 24, 48, 0.24);
+    &--content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1250px;
+      margin: 0 auto;
+      width: 100%;
+      height: 100%;
+    }
+    font-size: 1.5em;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 40px;
+    @media only screen and (max-width: 480px) {
+      font-size: 1.3em;
+      width: 100%;
+    }
+    &--logo {
+      @media only screen and (max-width: 480px) {
+        display: none;
+      }
+    }
+    &--list {
+      @media only screen and (max-width: 480px) {
+        font-size: 1.3em;
+        justify-content: space-between;
+        width: 100%;
+      }
+      display: flex;
+      font-family: "VT323";
+      li {
+        @media only screen and (max-width: 480px) {
+          margin-left: 0;
+        }
+        &:hover {
+          color: $senti-active;
+        }
+        cursor: pointer;
+        margin-left: 30px;
+      }
+    }
+  }
+  .button {
+    outline: 0;
+    padding: 5px 10px;
+    display: block;
+    cursor: pointer;
+    font-size: 2rem;
+    min-width: 180px;
+    height: 60px;
+    border: 1px;
+    font-family: "VT323";
+    @media only screen and (max-width: 568px) {
+      max-width: 98%;
+    }
+    &.filled {
+      &--primary {
+        position: relative;
+        background-color: $senti-active;
+        color: $senti-filling;
+        border-color: $senti-active;
+        border-style: solid;
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          z-index: -1;
+          height: 110%;
+          left: 10px;
+          top: 5px;
+          background-color: $senti-activeSec;
+        }
+      }
+      &--secondary {
+        background-color: $senti-filling;
+        color: $senti-inactive;
+        border-color: $senti-filling;
+        border-style: solid;
+      }
+    }
+    &.outlined {
+      &--primary {
+        background-color: transparent;
+        color: $senti-active;
+        border-color: $senti-active;
+        border-style: solid;
+      }
+      &--secondary {
+        position: relative;
+        background-color: transparent;
+        color: $senti-active;
+        border-color: $senti-active;
+        background-color: $senti-filling;
+        border-style: solid;
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          z-index: -1;
+          height: 110%;
+          left: 10px;
+          top: 5px;
+          border: 1px;
+          border-color: $senti-active;
+          border-style: dotted;
+          background-color: $senti-filling;
+        }
+      }
+    }
+  }
+  .skill-card {
+    &__progress-bar {
+      position: relative;
+      height: 12px;
+      background-color: $infa-extraFilling;
+      margin-top: 5px;
+      border-radius: 2px;
+      &--filled {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background-color: $senti-active;
+      }
+    }
+  }
+  .pro-card {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    &--image {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: $senti-fillingTransparent;
+        width: 100%;
+        height: 100%;
+        content: "";
+      }
+    }
+  }
+  .soc-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px dotted $senti-active;
+  }
+  .input {
+    display: block;
+    font-family: "VT323";
+    label {
+      min-width: 150px;
+      display: inline-block;
+      font-size: 1.25rem;
+      margin-bottom: 5px;
+      color: $senti-active;
+      max-width: 180px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+    input {
+      font-size: 1.2rem;
+      padding: 10px 10px 10px 0;
+      font-family: "VT323";
+      width: 100%;
+      height: 35px;
+      color: $senti-inactive;
+      background-color: transparent;
+      display: block;
+      outline: 0;
+      border: 1px;
+      border-style: dotted;
+      border-color: $senti-active;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+    }
+  }
+  .textarea {
+    display: block;
+    font-family: "VT323";
+    label {
+      min-width: 150px;
+      display: inline-block;
+      font-size: 1.25rem;
+      color: $senti-active;
+      background-color: transparent;
+      max-width: 180px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+    textarea {
+      resize: none;
+      font-family: "VT323";
+      padding: 10px 0 0 0;
+      font-size: 1.2rem;
+      width: 100%;
+      color: $infa-inactive;
+      background-color: transparent;
+      display: block;
+      outline: 0;
+      border: 1px;
+      border-style: dotted;
+      border-color: $senti-active;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+    }
+  }
+  .ide-card {
+    margin: 10px 0;
+    &--imgContainer {
+      display: none;
+    }
+  }
+}
+
+.theme-switcher {
+  cursor: pointer;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  .one-wave,
+  .two-wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 50%;
+    height: 100%;
+  }
+  .one-wave {
+    transform: scale(1.2);
+  }
+  .two-wave {
+    transform: scale(1.4);
+  }
+  .img {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60%;
+  }
+  @keyframes bip {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  &.senti {
+    background-color: $infa-active;
+    .one-wave {
+      background-color: rgba(255, 166, 0, 0.589);
+    }
+    .two-wave {
+      background-color: rgba(255, 166, 0, 0.185);
+      animation: bip 0.6s infinite;
+      animation-direction: alternate-reverse;
+    }
+    .img {
+      transform: scale(0.9) translateX(4px);
+    }
+    background-color: rgba(255, 166, 0, 1);
+  }
+  &.infa {
+    .one-wave {
+      background-color: rgba(245, 43, 218, 0.64);
+    }
+    .two-wave {
+      background-color: rgba(136, 80, 154, 0.39);
+      animation: bip 0.6s infinite;
+      animation-direction: alternate-reverse;
+    }
+    .img {
+      transform: scale(1.2);
+    }
+
+    background-color: rgba(136, 80, 154, 1);
+  }
+}

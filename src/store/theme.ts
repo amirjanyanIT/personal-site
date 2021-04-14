@@ -2,17 +2,18 @@ import { makeAutoObservable } from "mobx";
 import { themeStoreObject, themeType } from "./types/theme";
 
 class Theme implements themeStoreObject {
-  currentTheme: themeType = themeType.business;
+  currentTheme: themeType = "infa";
+
   constructor() {
     makeAutoObservable(this);
   }
+
   changeTheme() {
-    if (this.currentTheme === themeType.business) {
-      this.currentTheme = themeType.infa;
+    if (this.currentTheme === "infa") {
+      this.currentTheme = "senti";
     } else {
-      this.currentTheme = themeType.business;
+      this.currentTheme = "infa";
     }
-    return this.currentTheme;
   }
 }
 

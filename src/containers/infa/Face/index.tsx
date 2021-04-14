@@ -32,7 +32,6 @@ export const Face = forwardRef((_props, ref) => {
             </Typography>
           </Typography>
         </div>
-        <div className="container__face__upper--person" />
         <div className="container__face__upper__info">
           <Typography fontWeight="bold" type="title">
             SOFTWARE ENGINER

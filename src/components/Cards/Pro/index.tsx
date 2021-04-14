@@ -1,7 +1,9 @@
 import { Typography } from "../../Typography";
 import { ProPropsInterface } from "./types";
+import theme from "../../../store/theme";
+import { observer } from "mobx-react-lite";
 
-export const Pro = (props: ProPropsInterface) => {
+export const Pro = observer((props: ProPropsInterface) => {
   const { title, imagePath, projectURL, size = 300 } = props;
 
   const onCardClick = () => {
@@ -30,9 +32,12 @@ export const Pro = (props: ProPropsInterface) => {
         }}
       />
       <div className={`pro-card--image-fade`}></div>
-      <Typography type="extraTitle" color="inactive">
+      <Typography
+        type="extraTitle"
+        color={theme.currentTheme === "infa" ? "inactive" : "active"}
+      >
         {title}
       </Typography>
     </div>
   );
-};
+});

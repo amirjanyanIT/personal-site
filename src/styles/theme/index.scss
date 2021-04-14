@@ -1,0 +1,14 @@
+@import "./modules/colors.scss";
+@import "./modules/typography.scss";
+@import "./modules/blocks.scss";
+@import "./modules/elements.scss";
+@import "./modules/container.scss";
+
+body.infa {
+  background-color: $infa-filling !important;
+  color: $infa-inactive !important;
+}
+body.senti {
+  background-color: $senti-filling !important;
+  color: $senti-inactive !important;
+}

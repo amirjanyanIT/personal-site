@@ -1,13 +1,17 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { observer } from "mobx-react-lite";
-import { Face } from "./containers/business/Face";
-import { Ideas } from "./containers/business/Ideas";
-import { Contacts } from "./containers/business/Contacts";
-import { Projects } from "./containers/business/Projects";
-import { About } from "./containers/business/About";
-import theme from "./store/theme";
+import { Face } from "./containers/infa/Face";
+import { Ideas } from "./containers/infa/Ideas";
+import { Contacts } from "./containers/infa/Contacts";
+import { Projects } from "./containers/infa/Projects";
+import { About } from "./containers/infa/About";
+import { Kid } from "./containers/senti/Kid";
 import { Navigator } from "./components/Navigator";
 import { Typography } from "./components/Typography";
+
+import theme from "./store/theme";
+import { ThemeSwitcher } from "./components/ThemeSwitcher";
+import { PageLoader } from "./components/PageLoader";
 
 export const App = observer(() => {
   const faceRef = useRef();
@@ -15,8 +19,19 @@ export const App = observer(() => {
   const contactsRef = useRef();
   const projectsRef = useRef();
   const aboutRef = useRef();
+
+  useEffect(() => {
+    const body = document.querySelector("body");
+    body?.classList.remove("senti");
+    body?.classList.remove("infa");
+
+    body?.classList.add(`${theme.currentTheme}`);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [theme.currentTheme]);
+
   return (
     <div className={`App theme-${theme.currentTheme}`}>
+      <PageLoader onLoad={true} />
       <Navigator
         sections={[
           {
@@ -41,16 +56,18 @@ export const App = observer(() => {
           },
         ]}
         logo={
-          <Typography color="active" type="text">
+          <Typography color="active" type="title">
             .HA
           </Typography>
         }
       />
-      <Face ref={faceRef} />
-      <Ideas ref={ideasRef} />
-      <Contacts ref={contactsRef} />
+      {theme.currentTheme === "infa" && <Face ref={faceRef} />}
+      {theme.currentTheme === "senti" && <Kid ref={faceRef} />}
       <Projects ref={projectsRef} />
       <About ref={aboutRef} />
+      <Contacts ref={contactsRef} />
+      <Ideas ref={ideasRef} />
+      <ThemeSwitcher />
     </div>
   );
 });
