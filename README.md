@@ -1,5 +1,5 @@
-//# 🐼 Hi My Name Is Hovhannes 🐼
+# 🐼 Hi My Name Is Hovhannes 🐼
 
-//🐱‍👤 This is my personal web site. 🐱‍👤
+🐱‍👤 This is my personal web site. 🐱‍👤
 
-//# You can see it in.
+# You can see it in.
